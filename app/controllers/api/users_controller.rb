@@ -29,7 +29,7 @@ module Api
         User.PullFitBitGoals(user_id)
         render json: User.find(user_id)
       else
-        render json: {status: 400, message: "invalid id"}.to_json
+        render json: {status: 400, message: "invalid user_id"}.to_json
       end
     end
 
