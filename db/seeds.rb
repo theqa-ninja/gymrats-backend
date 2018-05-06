@@ -16,34 +16,34 @@ u3 = User.new(name: "john doe", email: "test@lala.com", dna: "pair says good", f
 u3.save!
 
 Allelean.destroy_all
-a0 = Allelean.new(name: "egg", photo: "egg.svg", evolve_id: nil)
+a0 = Allelean.new(name: "egg", photo: "ic_egg.xml", evolve_id: nil)
 a0.save!
 
-a3 = Allelean.new(name: "monkey boss", photo: "monkeyBoss.svg", evolve_id: nil)
+a3 = Allelean.new(name: "monkey boss", photo: "ic_monkey_boss.xml", evolve_id: nil)
 a3.save!
 
-a2 = Allelean.new(name: "monkey gremling", photo: "monkeyGremling.svg", evolve_id: a3.id)
+a2 = Allelean.new(name: "monkey gremling", photo: "ic_monkey_gremling.xml", evolve_id: a3.id)
 a2.save!
 
-a1 = Allelean.new(name: "monkey base", photo: "monkey.svg", evolve_id: a2.id)
+a1 = Allelean.new(name: "monkey base", photo: "ic_monkey.xml", evolve_id: a2.id)
 a1.save!
 
-a4 = Allelean.new(name: "cat", photo: "cat.svg")
+a4 = Allelean.new(name: "cat", photo: "ic_cat.xml")
 a4.save!
 
-a5 = Allelean.new(name: "dog", photo: "dog.svg")
+a5 = Allelean.new(name: "dog", photo: "ic_egg.xml")
 a5.save!
 
-a6 = Allelean.new(name: "Gym Rat", photo: "gym-rat.svg")
+a6 = Allelean.new(name: "Gym Rat", photo: "ic_gym_rat.xml")
 a6.save!
 
-a7 = Allelean.new(name: "owl", photo: "owl.svg")
+a7 = Allelean.new(name: "owl", photo: "ic_owl.xml")
 a7.save!
 
-a8 = Allelean.new(name: "unicorn", photo: "unicorn.svg")
+a8 = Allelean.new(name: "unicorn", photo: "ic_unicorn.xml")
 a8.save!
 
-a9 = Allelean.new(name: "whale", photo: "whale.svg")
+a9 = Allelean.new(name: "whale", photo: "ic_whale.xml")
 a9.save!
 
 Stable.new(user_id: u1.id, allelean_id: a1.id, is_active: true, level: 1, exp: 50, aquired_date: Time.now.utc).save!
