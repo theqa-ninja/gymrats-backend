@@ -12,5 +12,9 @@ Rails.application.routes.draw do
     resources :alleleans, only: [:index, :show] do
       get :search, on: :collection
     end
+
+    resources :helix, only: [:index, :show] do
+      get :search, on: :collection
+    end
   end
 end

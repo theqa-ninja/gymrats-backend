@@ -1,0 +1,2 @@
+class HelixInfo < ApplicationRecord
+end

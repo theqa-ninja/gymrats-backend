@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180506025730) do
+ActiveRecord::Schema.define(version: 20180506050913) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,21 @@ ActiveRecord::Schema.define(version: 20180506025730) do
     t.text "name", null: false
     t.text "photo", null: false
     t.integer "evolve_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "helix_infos", force: :cascade do |t|
+    t.text "gene"
+    t.text "variant"
+    t.text "a1"
+    t.text "a2"
+    t.text "trait"
+    t.text "insight"
+    t.text "recommend"
+    t.text "impact"
+    t.text "frequency"
+    t.text "references"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,6 +56,7 @@ ActiveRecord::Schema.define(version: 20180506025730) do
     t.text "fitbit_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "helix_ids", array: true
   end
 
 end

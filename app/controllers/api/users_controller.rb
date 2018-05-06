@@ -27,6 +27,9 @@ module Api
       newUserInfo['email'] = params[:email]
       newUser = User.new(newUserInfo)
       if newUser.save!
+        a_id = Allelean.egg
+        a_id = Allelean.randomizer if params[:dna]
+        Stable.new(user_id: newUser.id, allelean_id: a_id, aquired_date: Time.now.utc).save!
         render json: newUser
       else
         render json: {status: 400, message: "error creating user"}.to_json

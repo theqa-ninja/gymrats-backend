@@ -15,9 +15,8 @@ module Api
 
     def search
       query = params[:query]
-      tempUser = Allelean.where('name LIKE ?' +
-        ' OR email LIKE ?',
-        "%#{query}%","%#{query}%")
+      tempUser = Allelean.where('name LIKE ?',
+        "%#{query}%")
         render json: tempUser
     end
   end
