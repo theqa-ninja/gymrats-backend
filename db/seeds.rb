@@ -50,6 +50,7 @@ a8.save!
 a9 = Allelean.new(name: "Fit Whale", slug: "fit-whale", photo: "ic_whale.xml", web_photo: "whale.svg", multiplier_steps: 1.3, multiplier_calories: 1.3, multiplier_sleep: 1, multiplier_water: 2)
 a9.save!
 
+Stable.destroy_all
 Stable.new(user_id: u1.id, allelean_id: a4.id, is_active: true, level: 1, exp: 50, aquired_date: Time.now.utc).save!
 
 Stable.new(user_id: u2.id, allelean_id: a7.id, is_active: true, exp: 100, level: 3, aquired_date: Time.now.utc).save!
