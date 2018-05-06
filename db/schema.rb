@@ -10,17 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180506013435) do
+ActiveRecord::Schema.define(version: 20180506025730) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "SequelizeMeta", primary_key: "name", id: :string, limit: 255, force: :cascade do |t|
+  create_table "alleleans", force: :cascade do |t|
+    t.text "name", null: false
+    t.text "photo", null: false
+    t.integer "evolve_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stables", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "allelean_id", null: false
+    t.boolean "is_active", default: false
+    t.datetime "aquired_date"
+    t.integer "exp", default: 0
+    t.integer "level", default: 1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.text "name"
+    t.text "name", null: false
     t.text "email"
+    t.text "dna"
+    t.text "fitbit_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

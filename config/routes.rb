@@ -4,5 +4,13 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :new, :edit, :show, :destroy] do
       get :search, on: :collection
     end
+
+    resources :stables, only: [:index, :new, :edit, :show, :destroy] do
+      get :search, on: :collection
+    end
+
+    resources :alleleans, only: [:index, :show] do
+      get :search, on: :collection
+    end
   end
 end

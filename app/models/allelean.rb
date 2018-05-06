@@ -1,0 +1,2 @@
+class Allelean < ApplicationRecord
+end
