@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 User.destroy_all
 u1 = User.new(name: "ash", email: "ash@catch.com", dna: "brat good", fitbit_token: "fitbit please connect")
 u1.save!
@@ -29,8 +28,25 @@ a2.save!
 a1 = Allelean.new(name: "monkey base", photo: "monkey.svg", evolve_id: a2.id)
 a1.save!
 
-Stable.new(user_id: u1.id, allelean_id: a1.id, is_active: true, level: 1, exp: 50, aquired_date: Time.now.utc).save!
+a4 = Allelean.new(name: "cat", photo: "cat.svg")
+a4.save!
 
+a5 = Allelean.new(name: "dog", photo: "dog.svg")
+a5.save!
+
+a6 = Allelean.new(name: "Gym Rat", photo: "gym-rat.svg")
+a6.save!
+
+a7 = Allelean.new(name: "owl", photo: "owl.svg")
+a7.save!
+
+a8 = Allelean.new(name: "unicorn", photo: "unicorn.svg")
+a8.save!
+
+a9 = Allelean.new(name: "whale", photo: "whale.svg")
+a9.save!
+
+Stable.new(user_id: u1.id, allelean_id: a1.id, is_active: true, level: 1, exp: 50, aquired_date: Time.now.utc).save!
 
 Stable.new(user_id: u2.id, allelean_id: a2.id, is_active: true, exp: 100, level: 3, aquired_date: Time.now.utc).save!
 
