@@ -37,6 +37,7 @@ class Stable < ApplicationRecord
     # user.name = result['user']['displayName']
     # user.save!
     end
+    exp = 100 if (exp > 100)
     unit.exp = unit.exp + exp
     if (unit.exp >= 100)
       unit.level = unit.level + (unit.exp.to_i / 100)
