@@ -23,14 +23,14 @@ Allelean.destroy_all
 a0 = Allelean.new(name: "Base Egg", slug: "basic-egg", photo: "ic_egg.xml", web_photo: "egg.svg", multiplier_steps: 0.1, multiplier_calories: 0.1, multiplier_sleep: 0.1, multiplier_water: 0.1)
 a0.save!
 
-a3 = Allelean.new(name: "Monkey Boss", slug: "monkey-boss", photo: "ic_monkey_boss.xml", web_photo: "monkey_boss.svg",evolve_id: nil, multiplier_steps: 1, multiplier_calories: 1, multiplier_sleep: 1, multiplier_water: 1)
-a3.save!
+# a3 = Allelean.new(name: "Monkey Boss", slug: "monkey-boss", photo: "ic_monkey_boss.xml", web_photo: "monkey_boss.svg",evolve_id: nil, multiplier_steps: 1, multiplier_calories: 1, multiplier_sleep: 1, multiplier_water: 1)
+# a3.save!
 
-a2 = Allelean.new(name: "Monkey Gremling", slug: "monkey-gremling", photo: "ic_monkey_gremling.xml", web_photo: "monkey_gremling.svg", evolve_id: a3.id, multiplier_steps: 1, multiplier_calories: 1, multiplier_sleep: 1, multiplier_water: 1)
-a2.save!
+# a2 = Allelean.new(name: "Monkey Gremling", slug: "monkey-gremling", photo: "ic_monkey_gremling.xml", web_photo: "monkey_gremling.svg", evolve_id: a3.id, multiplier_steps: 1, multiplier_calories: 1, multiplier_sleep: 1, multiplier_water: 1)
+# a2.save!
 
-a1 = Allelean.new(name: "Monkey Base", slug: "monkey-base", photo: "ic_monkey.xml", web_photo: "monkey.svg", evolve_id: a2.id, multiplier_steps: 10000, multiplier_calories: 1000, multiplier_sleep: 1, multiplier_water: 10)
-a1.save!
+# a1 = Allelean.new(name: "Monkey Base", slug: "monkey-base", photo: "ic_monkey.xml", web_photo: "monkey.svg", evolve_id: a2.id, multiplier_steps: 10000, multiplier_calories: 1000, multiplier_sleep: 1, multiplier_water: 10)
+# a1.save!
 
 a4 = Allelean.new(name: "Fat Cat", slug: "fat-cat", photo: "ic_cat.xml", web_photo: "cat.svg", multiplier_steps: 0.3, multiplier_calories: 0.3, multiplier_sleep: 2, multiplier_water: 1)
 a4.save!

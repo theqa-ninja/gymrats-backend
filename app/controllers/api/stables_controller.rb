@@ -24,6 +24,17 @@ module Api
       end
     end
 
+    def weeklyPrize
+      user_id = params[:user_id]
+      if User.exists?(user_id)
+        yesterday = 1.week.ago.strftime("%Y-%m-%d")
+        stable  = Stable.WeeklyPrize(user_id, yesterday)
+        render json: stable
+      else
+        render json: {status: 400, message: "invalid user_id"}.to_json
+      end
+    end
+
     def new
       newUserInfo = Hash.new
       newUserInfo['user_id'] = params[:user_id]

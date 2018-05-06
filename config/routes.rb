@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
     resources :stables, only: [:index, :new, :edit, :show, :destroy] do
       get :calulateExp, on: :collection
+      get :weeklyPrize, on: :collection
     end
 
     resources :fitbit do

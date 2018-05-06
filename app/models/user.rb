@@ -1,7 +1,7 @@
 # require 'FitbitHelper'
 class User < ApplicationRecord
 # include FitbitHelper
-  @temp_token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1RFJCMjQiLCJhdWQiOiIyMkNSS1QiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJ3aHIgd251dCB3cHJvIHdzbGUgd3dlaSB3c29jIHdhY3Qgd3NldCB3bG9jIiwiZXhwIjoxNTI1NjIxMTc3LCJpYXQiOjE1MjU1OTIzNzd9.oadFv1CPNV9xXe5XMpDGtfJAZgbabzbffpgqaG9T-sk"
+  @temp_token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1RFJCMjQiLCJhdWQiOiIyMkNSS1QiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJ3aHIgd251dCB3cHJvIHdzbGUgd3dlaSB3c29jIHdhY3Qgd3NldCB3bG9jIiwiZXhwIjoxNTI1NjU4MjQxLCJpYXQiOjE1MjU2Mjk0NDF9.xWc1RT3lcS7YaA1B7y8StjtgLg9tiByAQs7GFm6KtZk"
   def self.PullFitBitGoals(user_id)
     user = User.find(user_id)
     fb_token = user.fitbit_token
