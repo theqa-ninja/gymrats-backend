@@ -21,6 +21,18 @@ module Api
         render json: tempUser
     end
 
+    def updateGoals
+      user_id = params[:id]
+      if User.exists?(user_id)
+        User.GetWaterGoal(user_id)
+        User.GetSleepGoal(user_id)
+        User.PullFitBitGoals(user_id)
+        render json: User.find(user_id)
+      else
+        render json: {status: 400, message: "invalid id"}.to_json
+      end
+    end
+
     def new
       newUserInfo = Hash.new
       newUserInfo['name'] = params[:name]

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :users, only: [:index, :new, :edit, :show, :destroy] do
       get :search, on: :collection
+      get :updateGoals, on: :collection
     end
 
     resources :stables, only: [:index, :new, :edit, :show, :destroy] do

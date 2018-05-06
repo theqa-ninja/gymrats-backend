@@ -16,34 +16,34 @@ u3 = User.new(name: "john doe", email: "test@lala.com", dna: "pair says good", f
 u3.save!
 
 Allelean.destroy_all
-a0 = Allelean.new(name: "egg", photo: "ic_egg.xml", evolve_id: nil)
+a0 = Allelean.new(name: "egg", photo: "ic_egg.xml", web_photo: "egg.svg", multiplier_steps: 0, multiplier_calories: 0, multiplier_sleep: 0, multiplier_water: 0)
 a0.save!
 
-a3 = Allelean.new(name: "monkey boss", photo: "ic_monkey_boss.xml", evolve_id: nil)
+a3 = Allelean.new(name: "monkey boss", photo: "ic_monkey_boss.xml", web_photo: "monkey_boss.svg",evolve_id: nil, multiplier_steps: 1, multiplier_calories: 1, multiplier_sleep: 1, multiplier_water: 1)
 a3.save!
 
-a2 = Allelean.new(name: "monkey gremling", photo: "ic_monkey_gremling.xml", evolve_id: a3.id)
+a2 = Allelean.new(name: "monkey gremling", photo: "ic_monkey_gremling.xml", web_photo: "monkey_gremling.svg", evolve_id: a3.id, multiplier_steps: 1, multiplier_calories: 1, multiplier_sleep: 1, multiplier_water: 1)
 a2.save!
 
-a1 = Allelean.new(name: "monkey base", photo: "ic_monkey.xml", evolve_id: a2.id)
+a1 = Allelean.new(name: "monkey base", photo: "ic_monkey.xml", web_photo: "monkey.svg", evolve_id: a2.id, multiplier_steps: 10000, multiplier_calories: 1000, multiplier_sleep: 1, multiplier_water: 10)
 a1.save!
 
-a4 = Allelean.new(name: "cat", photo: "ic_cat.xml")
+a4 = Allelean.new(name: "Fat Cat", photo: "ic_cat.xml", web_photo: "cat.svg", multiplier_steps: 0.3, multiplier_calories: 0.3, multiplier_sleep: 2, multiplier_water: 1)
 a4.save!
 
-a5 = Allelean.new(name: "dog", photo: "ic_egg.xml")
+a5 = Allelean.new(name: "Up Dog", photo: "ic_dog.xml", web_photo: "dog.svg", multiplier_steps: 1.1, multiplier_calories: 1.1, multiplier_sleep: 1.1, multiplier_water: 1.1)
 a5.save!
 
-a6 = Allelean.new(name: "Gym Rat", photo: "ic_gym_rat.xml")
+a6 = Allelean.new(name: "Gym Rat", photo: "ic_gym_rat.xml", web_photo: "gym_rat.svg", multiplier_steps: 1.5, multiplier_calories: 1.5, multiplier_sleep: 1, multiplier_water: 1.5)
 a6.save!
 
-a7 = Allelean.new(name: "owl", photo: "ic_owl.xml")
+a7 = Allelean.new(name: "Night Owl", photo: "ic_owl.xml", web_photo: "owl.svg", multiplier_steps: 1.25, multiplier_calories: 1, multiplier_sleep: 1.5, multiplier_water: 0.5)
 a7.save!
 
-a8 = Allelean.new(name: "unicorn", photo: "ic_unicorn.xml")
+a8 = Allelean.new(name: "Mythical Unicorn", photo: "ic_unicorn.xml", web_photo: "unicorn.svg", multiplier_steps: 3, multiplier_calories: 3, multiplier_sleep: 3, multiplier_water: 3)
 a8.save!
 
-a9 = Allelean.new(name: "whale", photo: "ic_whale.xml")
+a9 = Allelean.new(name: "Fit Whale", photo: "ic_whale.xml", web_photo: "whale.svg", multiplier_steps: 1.3, multiplier_calories: 1.3, multiplier_sleep: 1, multiplier_water: 2)
 a9.save!
 
 Stable.new(user_id: u1.id, allelean_id: a1.id, is_active: true, level: 1, exp: 50, aquired_date: Time.now.utc).save!

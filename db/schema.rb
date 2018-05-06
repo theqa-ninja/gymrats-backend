@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180506050913) do
+ActiveRecord::Schema.define(version: 20180506092717) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,11 @@ ActiveRecord::Schema.define(version: 20180506050913) do
     t.integer "evolve_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "multiplier_steps"
+    t.float "multiplier_calories"
+    t.float "multiplier_sleep"
+    t.float "multiplier_water"
+    t.text "web_photo"
   end
 
   create_table "helix_infos", force: :cascade do |t|
@@ -57,6 +62,14 @@ ActiveRecord::Schema.define(version: 20180506050913) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "helix_ids", array: true
+    t.integer "daily_steps"
+    t.integer "daily_calorie_burn"
+    t.integer "daily_distance"
+    t.integer "daily_floors"
+    t.integer "daily_water_in_cups"
+    t.integer "daily_sleep_in_mins"
+    t.time "daily_bedtime"
+    t.time "daily_wakeuptime"
   end
 
 end
