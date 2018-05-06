@@ -39,6 +39,9 @@ module Api
       newUserInfo['email'] = params[:email]
       newUser = User.new(newUserInfo)
       if newUser.save!
+        User.GetWaterGoal(newUser.id)
+        User.GetSleepGoal(newUser.id)
+        User.PullFitBitGoals(newUser.id)
         a_id = Allelean.egg
         a_id = Allelean.randomizer if params[:dna]
         Stable.new(user_id: newUser.id, allelean_id: a_id, aquired_date: Time.now.utc).save!
