@@ -5,20 +5,23 @@ module Api
     end
 
     def show
-      user_id = params[:id]
-      if Stable.exists?(user_id)
-        render json: Stable.find(user_id)
+      user_id = params[:user_id]
+      if Stable.exists?(user_id: user_id)
+        render json: Stable.where(user_id: user_id)
       else
         render json: {status: 400, message: "invalid id"}.to_json
       end
     end
 
-    def search
-      query = params[:query]
-      tempUser = Stable.where('name LIKE ?' +
-        ' OR email LIKE ?',
-        "%#{query}%","%#{query}%")
-        render json: tempUser
+    def calulateExp
+      user_id = params[:user_id]
+      if User.exists?(user_id)
+        yesterday = Date.yesterday.strftime("%Y-%m-%d")
+        stable  = Stable.CalculateExp(user_id, yesterday)
+        render json: stable
+      else
+        render json: {status: 400, message: "invalid user_id"}.to_json
+      end
     end
 
     def new

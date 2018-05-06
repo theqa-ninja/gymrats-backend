@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     end
 
     resources :stables, only: [:index, :new, :edit, :show, :destroy] do
+      get :calulateExp, on: :collection
+    end
+
+    resources :fitbit do
       get :search, on: :collection
     end
 
