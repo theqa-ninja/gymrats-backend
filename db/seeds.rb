@@ -20,7 +20,7 @@ User.GetSleepGoal(u3.id)
 User.PullFitBitGoals(u3.id)
 
 Allelean.destroy_all
-a0 = Allelean.new(name: "Base Egg", slug: "basic-egg", photo: "ic_egg.xml", web_photo: "egg.svg", multiplier_steps: 0, multiplier_calories: 0, multiplier_sleep: 0, multiplier_water: 0)
+a0 = Allelean.new(name: "Base Egg", slug: "basic-egg", photo: "ic_egg.xml", web_photo: "egg.svg", multiplier_steps: 0.1, multiplier_calories: 0.1, multiplier_sleep: 0.1, multiplier_water: 0.1)
 a0.save!
 
 a3 = Allelean.new(name: "Monkey Boss", slug: "monkey-boss", photo: "ic_monkey_boss.xml", web_photo: "monkey_boss.svg",evolve_id: nil, multiplier_steps: 1, multiplier_calories: 1, multiplier_sleep: 1, multiplier_water: 1)

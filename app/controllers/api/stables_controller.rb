@@ -26,13 +26,15 @@ module Api
 
     def new
       newUserInfo = Hash.new
-      newUserInfo['name'] = params[:name]
-      newUserInfo['email'] = params[:email]
-      newUser = Stable.new(newUserInfo)
-      if newStable.save!
+      newUserInfo['user_id'] = params[:user_id]
+      newUserInfo['allelean_id'] = params[:allelean_id]
+      if User.find(newUserInfo['user_id']) && Allelean.find(newUserInfo['allelean_id'])
+        newUser = Stable.new(newUserInfo)
+        newUser.aquired_date = Time.now.utc
+        newUser.save!
         render json: newUser
       else
-        render json: {status: 400, message: "error creating user"}.to_json
+        render json: {status: 400, message: "error creating stable"}.to_json
       end
     end
 
